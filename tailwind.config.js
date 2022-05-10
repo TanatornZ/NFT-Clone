@@ -6,8 +6,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'button-primary' : '#EB1484',
-        'button-seccond' : '#C81CC5',
+        'primary' : '#EB1484',
+        'seccond' : '#C81CC5',
         'main' : '#24252d',
         'card' : '#2A2D3A',
         'footer' : '#24252D',

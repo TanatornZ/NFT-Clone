@@ -11,7 +11,7 @@ function Navbar({}: Props) {
 
   return (
     <>
-      <div className="flex bg-main p-8 justify-between items-center z-20 md:px-24">
+      <div className="flex bg-main p-8 justify-between items-center z-20 md:px-24 border-b">
         <div className=" flex items-center">
           <div className="w-8 h-8 relative">
             <Image src="/images/logo.png" layout="fill" alt="logo" />
