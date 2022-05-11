@@ -11,7 +11,7 @@ function Navbar({}: Props) {
   const [toggle, setToggle] = useState<boolean>(false);
 
   return (
-    <div className="relative">
+    <div className="relative ">
       <div className="flex bg-main p-8 justify-between items-center z-20 md:px-24 border-b">
         <div className=" flex items-center">
           <Title />
