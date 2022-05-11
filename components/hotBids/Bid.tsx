@@ -10,12 +10,12 @@ type Props = {
 
 function Bid({ img, name, price, like }: Props) {
   return (
-    <div className="rounded-xl p-3 bg-card ">
-      <div className="relative w-full h-36">
-        <Image src={img} layout="fill" className="rounded-xl" alt={`image ${name}`} />
+    <div className="rounded-xl p-2 bg-card ">
+      <div className="relative w-full h-44 md:h-72 lg:h-56">
+        <Image src={img} layout="fill" className="rounded-xl object-cover" alt={`image ${name}`} />
       </div>
 
-      <div className="flex justify-between items-center text-white mt-2 text-xs font-bold">
+      <div className="flex justify-between items-center text-white mt-2 text-xs font-bold p-2">
         <div className=" w-full ">
           <p >{name}</p>
           <p>{price} ETH</p>
