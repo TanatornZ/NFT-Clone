@@ -14,10 +14,10 @@ function main({}: Props) {
           type="email"
           name=""
           id=""
-          className="bg-black p-3 rounded-xl"
+          className="bg-black p-3 rounded-xl text-white"
           placeholder="Your Email"
         />
-        <div className="absolute top-0 right-0">
+        <div className="absolute top-0 -right-12 lg:-right-24">
           <PrimaryButton text="Email Me!" />
         </div>
       </div>
