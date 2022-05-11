@@ -10,15 +10,23 @@ function Navbar({}: Props) {
   const [toggle, setToggle] = useState<boolean>(false);
 
   return (
-    <>
+    <div className="relative">
       <div className="flex bg-main p-8 justify-between items-center z-20 md:px-24 border-b">
         <div className=" flex items-center">
           <div className="w-8 h-8 relative">
             <Image src="/images/logo.png" layout="fill" alt="logo" />
           </div>
-          <p className="text-white font-bold text-xl ml-1 -mt-1">CryptoKet</p>
+          <p className="text-white font-extrabold text-lg ml-1 -mt-1">
+            CryptoKet
+          </p>
           <div className="hidden xl:flex ml-8 items-center ">
-            <input type="text" name="" id="" placeholder="Seach Item Here" className="bg-[#1B1A21] py-2 px-4 rounded-xl" />
+            <input
+              type="text"
+              name=""
+              id=""
+              placeholder="Seach Item Here"
+              className="bg-[#1B1A21] py-2 px-4 rounded-xl"
+            />
             <p className="text-white text-xl ml-5">Explore</p>
             <p className="text-white text-xl ml-5">My Items</p>
           </div>
@@ -46,8 +54,8 @@ function Navbar({}: Props) {
           </div>
         </div>
       </div>
-      <ToggleNavbar toggle={toggle} />
-    </>
+        <ToggleNavbar toggle={toggle} />
+    </div>
   );
 }
 
