@@ -1,5 +1,5 @@
 import React from "react";
-import { hotBids } from "../../json/HotBids";
+import { hotBids } from "../../json/hotBids";
 import SecondaryButton from "../buttons/SecondaryButton";
 import Bid from "./Bid";
 
@@ -17,7 +17,7 @@ function HotBids({}: Props) {
       </div>
 
       <div className=" self-center mt-8">
-          <SecondaryButton text='Load More'/>
+        <SecondaryButton text="Load More" />
       </div>
     </div>
   );

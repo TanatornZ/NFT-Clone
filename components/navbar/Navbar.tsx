@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { HiMenuAlt1, HiOutlinePlus } from "react-icons/hi";
 import PrimaryButton from "../buttons/PrimaryButton";
 import SeccondaryButton from "../buttons/SecondaryButton";
+import Title from "../Title";
 import ToggleNavbar from "./ToggleNavbar";
 type Props = {};
 
@@ -13,12 +14,7 @@ function Navbar({}: Props) {
     <div className="relative">
       <div className="flex bg-main p-8 justify-between items-center z-20 md:px-24 border-b">
         <div className=" flex items-center">
-          <div className="w-8 h-8 relative">
-            <Image src="/images/logo.png" layout="fill" alt="logo" />
-          </div>
-          <p className="text-white font-extrabold text-lg ml-1 -mt-1">
-            CryptoKet
-          </p>
+          <Title />
           <div className="hidden xl:flex ml-8 items-center ">
             <input
               type="text"
