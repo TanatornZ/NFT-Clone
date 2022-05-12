@@ -7,7 +7,7 @@ type Props = {
 function PrimaryButton({ text }: Props) {
   return (
     <button className="py-2 px-4 rounded-xl  bg-gradient-to-r from-primary to-seccond">
-      <p className="text-white text-xl font-medium">{text}</p>
+      <p className="text-white  text-md md:text-xl font-medium">{text}</p>
     </button>
   );
 }

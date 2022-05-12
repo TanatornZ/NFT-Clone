@@ -10,7 +10,7 @@ function Layout({children}: Props) {
   return (
     <>
         <Navbar />
-            {children}
+            <div className="bg-main">{children}</div>
         <Footer />
     </>
   )

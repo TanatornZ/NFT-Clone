@@ -12,7 +12,7 @@ function Navbar({}: Props) {
 
   return (
     <div className="relative ">
-      <div className="flex bg-main p-8 justify-between items-center z-20 md:px-24 border-b">
+      <div className="flex bg-main p-8 justify-between items-center z-20 md:px-24 border-b border-border">
         <div className=" flex items-center">
           <Title />
           <div className="hidden xl:flex ml-8 items-center ">

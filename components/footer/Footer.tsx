@@ -7,8 +7,8 @@ type Props = {};
 
 function Footer({}: Props) {
   return (
-    <div className="border-t bg-footer">
-      <div className="flex flex-col md:flex-row justify-between py-12 px-20 lg:max-w-6xl mx-auto">
+    <div className="border-t border-border bg-footer">
+      <div className="flex flex-col md:flex-row justify-between pt-12 xl:pt-24 px-20 lg:max-w-6xl mx-auto">
         <MainFooter />
         <CryptoKet />
         <Support />

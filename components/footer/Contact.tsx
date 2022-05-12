@@ -4,7 +4,7 @@ type Props = {};
 
 function Contact({}: Props) {
   return (
-    <div className="flex justify-between  py-5 mx-5 border-t">
+    <div className="flex justify-between  py-5 mx-5 border-t border-border">
       <div className="text-white opacity-70">
         <p> © {new Date().getFullYear()} CrpytoKet, Inc. All Rights Reserved</p>
       </div>
