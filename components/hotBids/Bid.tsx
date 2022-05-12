@@ -16,11 +16,8 @@ function Bid({ img, name, price, like }: Props) {
   };
 
   return (
-    <div className="rounded-xl p-2 bg-card ">
-      <div
-        className="relative w-full h-44 md:h-72 lg:h-56 cursor-pointer"
-        onClick={goToBid}
-      >
+    <div className="rounded-xl p-2 bg-card cursor-pointer" onClick={goToBid}>
+      <div className="relative w-full h-44 md:h-72 lg:h-56 ">
         <Image
           src={img}
           layout="fill"

@@ -4,7 +4,7 @@ import React, { useContext, useState } from "react";
 import { HiMenuAlt1, HiOutlinePlus } from "react-icons/hi";
 import { AuthStateContext, AuthType } from "../../context/AuthContext";
 import PrimaryButton from "../buttons/PrimaryButton";
-import SeccondaryButton from "../buttons/SecondaryButton";
+import SecondaryButton from "../buttons/SecondaryButton";
 import Title from "../Title";
 import ToggleNavbar from "./ToggleNavbar";
 type Props = {};
@@ -45,7 +45,7 @@ function Navbar({}: Props) {
                 <PrimaryButton text="Create" goto="create" />
               </div>
               <div className="mr-6 hidden md:block">
-                <SeccondaryButton text="Connect" />
+                <SecondaryButton text="Connect" />
               </div>
             </>
           ) : (
@@ -54,7 +54,7 @@ function Navbar({}: Props) {
                 <PrimaryButton text="sign In" goto="login" />
               </div>
               <div className="mr-6 hidden md:block">
-                <SeccondaryButton text="sign Up" goto="register" />
+                <SecondaryButton text="sign Up" goto="register" />
               </div>
             </>
           )}
