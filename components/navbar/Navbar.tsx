@@ -1,6 +1,8 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import Router from "next/router";
+import React, { useContext, useState } from "react";
 import { HiMenuAlt1, HiOutlinePlus } from "react-icons/hi";
+import { AuthStateContext, AuthType } from "../../context/AuthContext";
 import PrimaryButton from "../buttons/PrimaryButton";
 import SeccondaryButton from "../buttons/SecondaryButton";
 import Title from "../Title";
@@ -9,6 +11,13 @@ type Props = {};
 
 function Navbar({}: Props) {
   const [toggle, setToggle] = useState<boolean>(false);
+
+  const { login , setLogin} = useContext<AuthType>(AuthStateContext);
+
+  const logout = () => {
+    setLogin(false);
+    Router.push('/')
+  }
 
   return (
     <div className="relative ">
@@ -25,16 +34,30 @@ function Navbar({}: Props) {
             />
             <p className="text-white text-xl ml-5">Explore</p>
             <p className="text-white text-xl ml-5">My Items</p>
+            {login && <p className="text-white text-xl ml-5 cursor-pointer" onClick={logout}>Logout</p>}
           </div>
         </div>
 
         <div className="flex items-center ">
-          <div className="mr-3 hidden md:block">
-            <PrimaryButton text="sign In" goto="login"/>
-          </div>
-          <div className="mr-6 hidden md:block">
-            <SeccondaryButton text="sign Up" goto="register" />
-          </div>
+          {login ? (
+            <>
+              <div className="mr-3 hidden md:block">
+                <PrimaryButton text="Create" goto="create" />
+              </div>
+              <div className="mr-6 hidden md:block">
+                <SeccondaryButton text="Connect" />
+              </div>
+            </>
+          ) : (
+            <>
+              <div className="mr-3 hidden md:block">
+                <PrimaryButton text="sign In" goto="login" />
+              </div>
+              <div className="mr-6 hidden md:block">
+                <SeccondaryButton text="sign Up" goto="register" />
+              </div>
+            </>
+          )}
           <div className="xl:hidden">
             {toggle ? (
               <HiOutlinePlus
@@ -50,7 +73,7 @@ function Navbar({}: Props) {
           </div>
         </div>
       </div>
-        <ToggleNavbar toggle={toggle} />
+      <ToggleNavbar toggle={toggle} />
     </div>
   );
 }

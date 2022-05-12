@@ -1,5 +1,6 @@
 import Router from "next/router";
-import React, { MouseEvent } from "react";
+import React, { MouseEvent, useContext, useEffect } from "react";
+import { AuthStateContext, AuthType}  from "../../context/AuthContext";
 
 type Props = {
   text: string;
@@ -7,8 +8,14 @@ type Props = {
 };
 
 function PrimaryButton({ text, goto }: Props) {
+
+  const {setLogin} = useContext<AuthType>(AuthStateContext);
+
   const goToPage = (e: MouseEvent<HTMLButtonElement>) => {
     if (goto) {
+      if (goto == "login") {
+        setLogin(true)
+      }
       Router.push(`${goto}`);
     }
   };

@@ -20,7 +20,7 @@ function Register({}: Props) {
         </div>
       </div>
 
-      <form action="" className="flex flex-col mt-8">
+      <div className="flex flex-col mt-8">
         <label className="text-xl font-bold">Upload</label>
         <input
           type="file"
@@ -63,9 +63,9 @@ function Register({}: Props) {
         />
         <div className="flex justify-between mt-5">
           <PrimaryButton text="register" />
-          <SecondaryButton text="Login" />
+          <SecondaryButton text="login" goto="login" />
         </div>
-      </form>
+      </div>
     </div>
   );
 }

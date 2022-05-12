@@ -9,7 +9,7 @@ function Login({}: Props) {
     <div className="py-8 px-5 md:px-8  bg-card flex flex-col w-2/3 md:max-w-sm rounded-xl mx-auto text-white">
       <p className="text-4xl text-extrabold text-center">Login</p>
 
-      <form action="" className="flex flex-col mt-8">
+      <div className="flex flex-col mt-8">
         <label className="text-xl font-bold">Username</label>
         <input
           type="text"
@@ -27,10 +27,10 @@ function Login({}: Props) {
           placeholder="Password"
         />
         <div className="flex justify-between mt-5">
-          <PrimaryButton text="Login" />
-          <SecondaryButton text="Register" />
+          <PrimaryButton text="Login" goto="login"/>
+          <SecondaryButton text="Register" goto="register" />
         </div>
-      </form>
+      </div>
     </div>
   );
 }

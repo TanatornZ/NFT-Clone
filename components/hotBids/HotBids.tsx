@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AuthStateContext } from "../../context/AuthContext";
 import { hotBids } from "../../json/hotBids";
 import SecondaryButton from "../buttons/SecondaryButton";
 import Bid from "./Bid";
@@ -6,6 +7,9 @@ import Bid from "./Bid";
 type Props = {};
 
 function HotBids({}: Props) {
+  
+  
+
   return (
     <div className="py-12 flex flex-col ">
       <p className="text-center text-3xl text-white font-bold">Hot Bids</p>
