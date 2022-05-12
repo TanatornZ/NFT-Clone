@@ -1,5 +1,7 @@
 import Image from "next/image";
-import React from "react";
+import Link from "next/link";
+import Router from "next/router";
+import React, { MouseEvent } from "react";
 
 type Props = {
   id: number;
@@ -9,8 +11,15 @@ type Props = {
 };
 
 function Seller({ name, total, img, id }: Props) {
+  const goToProfile = (e: MouseEvent<HTMLDivElement>) => {
+    Router.push("/profile/james");
+  };
+
   return (
-    <div className="py-5 md:py-8 bg-card  mx-3 lg:mx-5 mt-5 flex flex-col justify-center items-center text-white rounded-xl relative">
+    <div
+      className="py-5 md:py-8 bg-card  mx-3 lg:mx-5 mt-5 flex flex-col justify-center items-center text-white rounded-xl relative cursor-pointer"
+      onClick={goToProfile}
+    >
       <div className="rounded-full flex justify-center items-center w-5 h-5 md:w-8 md:h-8  bg-primary absolute top-3 left-3 ">
         <p className=" font-bold">{id + 1}</p>
       </div>

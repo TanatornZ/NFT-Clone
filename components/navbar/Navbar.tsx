@@ -30,10 +30,10 @@ function Navbar({}: Props) {
 
         <div className="flex items-center ">
           <div className="mr-3 hidden md:block">
-            <PrimaryButton text="sign In" />
+            <PrimaryButton text="sign In" goto="login"/>
           </div>
           <div className="mr-6 hidden md:block">
-            <SeccondaryButton text="sign Up" />
+            <SeccondaryButton text="sign Up" goto="register" />
           </div>
           <div className="xl:hidden">
             {toggle ? (
