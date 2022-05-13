@@ -16,7 +16,7 @@ function PrimaryButton({ text, goto }: Props) {
       if (goto == "login") {
         setLogin(true)
       }
-      Router.push(`${goto}`);
+      Router.push(`/${goto}`);
     }
   };
 
