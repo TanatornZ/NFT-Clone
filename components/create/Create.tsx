@@ -1,6 +1,9 @@
 import Image from "next/image";
 import React from "react";
 import PrimaryButton from "../buttons/PrimaryButton";
+import Field from "../inputField/Field";
+import SelectField from "../inputField/SelectField";
+import TextAndSelect from "../inputField/TextAndSelect";
 
 type Props = {};
 
@@ -22,69 +25,40 @@ function Create({}: Props) {
         </div>
       </div>
 
-      <form action="" className="flex flex-col mt-8">
-        <label className="text-xl font-bold">Upload</label>
-        <input
-          type="file"
-          name=""
-          id=""
-          className="bg-black p-5 my-3 rounded-xl "
-        />
-        <label className="text-xl font-bold mt-5">Name</label>
-        <input
-          type="text"
-          name=""
-          id=""
-          className="bg-black p-5 my-3 rounded-xl"
-          placeholder="Item Name"
-        />
-
-        <label className="text-xl font-bold mt-5">Description</label>
-        <textarea
-          className="bg-black p-5 my-3 rounded-xl"
+      <div className="flex flex-col mt-3">
+        <Field label="Upload" type="file" />
+        <Field label="Name" type="text" placeholder="Item Name" />
+        <Field
+          label="Description"
+          type="textarea"
           placeholder="Description of your item"
         />
 
-        <div className="">
-          <label className="text-xl font-bold mt-5">Price</label>
-          <div className="flex w-full">
-            <input
-              type="text"
-              name=""
-              id=""
-              className="bg-black p-5 my-3 rounded-xl w-full mr-3"
-              placeholder="Price"
-            />
-            <select className="bg-black p-5 my-3 rounded-xl">
-              <option value="ETH">ETH</option>
-              <option value="BTC">BTC</option>
-              <option value="LTC">LTC</option>
-            </select>
-          </div>
-        </div>
-
-        <label className="text-xl font-bold mt-5">Category</label>
-
-        <select className="bg-black p-5 my-3 rounded-xl">
-          <option>Art</option>
-          <option>Photography</option>
-          <option>Sports</option>
-          <option>Collectibles</option>
-          <option>Trading Cards</option>
-          <option>Utility</option>
-        </select>
-        <label className="text-xl font-bold mt-5">Available Items</label>
-        <input
-          type="password"
-          name=""
-          id=""
-          className="bg-black p-5 my-3 rounded-xl"
-          placeholder="No of Items"
+        <TextAndSelect
+          label="Price"
+          inputType="text"
+          inputPlaceholder="Price"
+          options={["ETH", "BTC", "LCT"]}
         />
+
+        <SelectField
+          label="Category"
+          options={[
+            "art",
+            "Photography",
+            "Sports",
+            "Collectibles",
+            "Trading",
+            "Utility",
+          ]}
+        />
+
+        <Field label="Available Items" type="text" placeholder="No of Items" />
+
         <div className="flex justify-end mt-5">
           <PrimaryButton text="Create Item" />
         </div>
-      </form>
+      </div>
     </div>
   );
 }

@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import PrimaryButton from "../buttons/PrimaryButton";
 import SecondaryButton from "../buttons/SecondaryButton";
+import Field from "../inputField/Field";
 
 type Props = {};
 
@@ -20,47 +21,13 @@ function Register({}: Props) {
         </div>
       </div>
 
-      <div className="flex flex-col mt-8">
-        <label className="text-xl font-bold">Upload</label>
-        <input
-          type="file"
-          name=""
-          id=""
-          className="bg-black p-5 my-3 rounded-xl"
-          placeholder="Name"
-        />
-        <label className="text-xl font-bold">Full Name</label>
-        <input
-          type="text"
-          name=""
-          id=""
-          className="bg-black p-5 my-3 rounded-xl"
-          placeholder="Name"
-        />
-        <label className="text-xl font-bold">Username</label>
-        <input
-          type="text"
-          name=""
-          id=""
-          className="bg-black p-5 my-3 rounded-xl"
-          placeholder="Username"
-        />
-        <label className="text-xl font-bold">Email</label>
-        <input
-          type="email"
-          name=""
-          id=""
-          className="bg-black p-5 my-3 rounded-xl"
-          placeholder="Email"
-        />
-        <label className="text-xl font-bold mt-5">Password</label>
-        <input
-          type="password"
-          name=""
-          id=""
-          className="bg-black p-5 my-3 rounded-xl"
-          placeholder="Password"
-        />
+      <div className="flex flex-col mt-3">
+        <Field label="Upload" type="file"  />
+        <Field label="Fullname" type="text" placeholder="Fullname" />
+        <Field label="Username" type="text" placeholder="Username" />
+        <Field label="Email" type="email" placeholder="Email" />
+        <Field label="Password" type="password" placeholder="Password" />
+
         <div className="flex justify-between mt-5">
           <PrimaryButton text="register" />
           <SecondaryButton text="login" goto="login" />

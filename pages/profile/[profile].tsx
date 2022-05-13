@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React, { ReactElement } from "react";
 import HotBids from "../../components/hotBids/HotBids";
+import TextAndSelect from "../../components/inputField/TextAndSelect";
 import Layout from "../../components/Layout";
 
 type Props = {};
@@ -28,19 +29,8 @@ export default function profile({}: Props) {
       </div>
       <div className="hidden md:block text-white mt-12 max-w-md mx-auto">
         <div className="flex justify-center items-center w-full">
-          <input
-            type="text"
-            name=""
-            id=""
-            className="bg-[#1B1A21] p-3 my-3 rounded-xl w-2/3 mr-3"
-            placeholder="Search Item here"
-          />
-          <select className="bg-[#1B1A21] p-3 my-3 w-1/3 rounded-xl">
-            <option>Recently Listed</option>
-            <option>Popular</option>
-            <option>Low to High</option>
-            <option>High to Low</option>
-          </select>
+          <TextAndSelect inputType="text" inputPlaceholder="Search Item here" options={['Recently Listed' , 'Popular','Low to High','High to Low']}/>
+
         </div>
       </div>
       <div className="mx-5 md:mx-24 lg:mx-36">

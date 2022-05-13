@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Router from "next/router";
+import Router, { useRouter } from "next/router";
 
 import React from "react";
 import { BsHeartFill } from "react-icons/bs";
@@ -11,8 +11,11 @@ type Props = {
 };
 
 function Bid({ img, name, price, like }: Props) {
+
+  const router = useRouter()
+
   const goToBid = () => {
-    Router.push("/post/1");
+    router.push("/post/[post]");
   };
 
   return (

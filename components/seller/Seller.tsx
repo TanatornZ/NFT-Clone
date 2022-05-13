@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Router from "next/router";
+import Router, { useRouter } from "next/router";
 import React, { MouseEvent } from "react";
 
 type Props = {
@@ -11,8 +11,9 @@ type Props = {
 };
 
 function Seller({ name, total, img, id }: Props) {
+  const router = useRouter();
   const goToProfile = (e: MouseEvent<HTMLDivElement>) => {
-    Router.push("/profile/james");
+    router.push("/profile/james");
   };
 
   return (
