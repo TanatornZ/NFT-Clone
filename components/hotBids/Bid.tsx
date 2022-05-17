@@ -15,7 +15,7 @@ function Bid({ img, name, price, like }: Props) {
   const router = useRouter()
 
   const goToBid = () => {
-    router.push("/post/[post]");
+    router.push("/post/123");
   };
 
   return (

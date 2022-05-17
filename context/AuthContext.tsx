@@ -17,7 +17,7 @@ export type AuthType = {
   setLogin: Dispatch<SetStateAction<boolean>>;
 };
 
-export const AuthStateContext = createContext<AuthType |null>(null);
+export const AuthStateContext = createContext<AuthType | undefined>(undefined);
 
 export const AuthProvider: FC<Props> = ({ children }) => {
   const [login, setLogin] = useState<boolean>(false);
