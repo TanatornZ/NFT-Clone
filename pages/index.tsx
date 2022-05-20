@@ -1,4 +1,4 @@
-import { ReactElement, useContext } from "react";
+import { ReactElement, useContext, useEffect } from "react";
 import Banner from "../components/Banner";
 
 import HotBids from "../components/hotBids/HotBids";
@@ -9,6 +9,14 @@ import { AuthStateContext } from "../context/AuthContext";
 
 export default function Home() {
  
+  useEffect(() => {
+    if("serviceWorker" in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+      .then( registration => {console.log('ServiceWorker is registered',registration);})
+      .catch(err => {console.log('ServiceWorker registration failed', err.message)})
+    }
+  },[])
+
   return (
     <div className="bg-main min-w-screen min-h-screen">
       {/* <Navbar /> */}
