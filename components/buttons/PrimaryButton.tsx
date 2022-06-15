@@ -9,6 +9,7 @@ type Props = {
 
 function PrimaryButton({ text, goto }: Props) {
 
+  //@ts-ignore
   const {setLogin} = useContext<AuthType>(AuthStateContext);
 
   const goToPage = (e: MouseEvent<HTMLButtonElement>) => {

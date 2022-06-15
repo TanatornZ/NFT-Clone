@@ -9,6 +9,8 @@ type Props = {
 };
 
 function ToggleNavbar({ toggle }: Props) {
+
+  //@ts-ignore
   const { login, setLogin } = useContext<AuthType>(AuthStateContext);
 
 

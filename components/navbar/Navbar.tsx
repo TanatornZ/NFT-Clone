@@ -11,13 +11,13 @@ type Props = {};
 
 function Navbar({}: Props) {
   const [toggle, setToggle] = useState<boolean>(false);
-
-  const { login , setLogin} = useContext<AuthType>(AuthStateContext);
+  //@ts-ignore
+  const { login, setLogin } = useContext<AuthType>(AuthStateContext);
 
   const logout = () => {
     setLogin(false);
-    Router.push('/')
-  }
+    Router.push("/");
+  };
 
   return (
     <div className="relative ">
@@ -34,7 +34,14 @@ function Navbar({}: Props) {
             />
             <p className="text-white text-xl ml-5">Explore</p>
             <p className="text-white text-xl ml-5">My Items</p>
-            {login && <p className="text-white text-xl ml-5 cursor-pointer" onClick={logout}>Logout</p>}
+            {login && (
+              <p
+                className="text-white text-xl ml-5 cursor-pointer"
+                onClick={logout}
+              >
+                Logout
+              </p>
+            )}
           </div>
         </div>
 
